@@ -112,9 +112,9 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 6rem; /* Adjust the button width as needed */
+            width: 6rem;
             overflow: hidden;
-            height: 2rem; /* Adjust the button height as needed */
+            height: 2rem;
             background-size: 300% 300%;
             backdrop-filter: blur(1rem);
             border-radius: 5rem;
@@ -128,7 +128,7 @@
         }
 
         .btn:nth-of-type(1) {
-            margin-right: 10px; /* Adjust the space between buttons */
+            margin-right: 10px;
         }
 
         #container-stars {
@@ -281,6 +281,7 @@
                 box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
             }
         }
+
         .modal {
             display: none;
             position: fixed;
@@ -302,6 +303,17 @@
 
         .close-btn {
             cursor: pointer;
+        }
+
+        /* Media Queries */
+        @media only screen and (max-width: 600px) {
+            .card {
+                max-width: 80%;
+            }
+
+            .button-container {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -350,7 +362,7 @@
      <!-- Modal HTML -->
      <div id="myModal" class="modal">
       <div class="modal-content">
-        <img src="./pictures/sawatu.jpeg" alt="Image Description" style="width: 20vw; height: 15vw; margin-left: -0.5vw;"><br><br>
+        <img src="./pictures/sawatu.jpeg" alt="Image Description" style="width: 90%; max-width: 300px;"><br><br>
         <audio controls>
           <source src="./music/y2mate.com - Best Cry Ever.mp3" type="audio/mp3">
           Your browser does not support the audio element.
