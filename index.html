@@ -16,7 +16,7 @@
             justify-content: center;
             font-family: 'Poppins', sans-serif;
         }
-
+    
         .card {
             width: 100%;
             max-width: 300px;
@@ -36,7 +36,7 @@
             flex-direction: column;
             cursor: pointer;
         }
-
+    
         .icon {
             margin: 0 auto;
             width: 100%;
@@ -51,11 +51,11 @@
             background-position: 0px;
             background-size: 200px;
         }
-
+    
         .icon svg {
             fill: white;
         }
-
+    
         .card .title {
             width: 100%;
             margin: 0;
@@ -66,7 +66,7 @@
             text-transform: uppercase;
             letter-spacing: 4px;
         }
-
+    
         .card .text {
             width: 80%;
             margin: 0 auto;
@@ -80,41 +80,41 @@
             max-height: 0;
             transition: all 0.3s ease;
         }
-
+    
         .card:hover {
             height: 270px;
         }
-
+    
         .card:hover .text {
             transition: all 0.3s ease;
             opacity: 1;
             max-height: 40px;
         }
-
+    
         .card:hover .icon {
             background-position: -120px;
             transition: all 0.3s ease;
         }
-
+    
         .card:hover .icon svg path {
             fill: url('#gradientColor');
             transition: all 0.3s ease;
         }
-
+    
         .button-container {
             display: flex;
             justify-content: space-between;
             margin-top: 20px;
             width: 80%;
         }
-
+    
         .btn {
             display: flex;
             justify-content: center;
             align-items: center;
-            width: 6rem;
+            width: 6rem; /* Adjust the button width as needed */
             overflow: hidden;
-            height: 2rem;
+            height: 2rem; /* Adjust the button height as needed */
             background-size: 300% 300%;
             backdrop-filter: blur(1rem);
             border-radius: 5rem;
@@ -126,11 +126,11 @@
             background-origin: border-box;
             background-clip: content-box, border-box;
         }
-
+    
         .btn:nth-of-type(1) {
-            margin-right: 10px;
+            margin-right: 10px; /* Adjust the space between buttons */
         }
-
+    
         #container-stars {
             position: absolute;
             z-index: -1;
@@ -141,7 +141,7 @@
             backdrop-filter: blur(1rem);
             border-radius: 5rem;
         }
-
+    
         strong {
             z-index: 2;
             font-family: 'Avalors Personal Use';
@@ -150,13 +150,13 @@
             color: #FFFFFF;
             text-shadow: 0 0 4px white;
         }
-
+    
         #glow {
             position: absolute;
             display: flex;
             width: 12rem;
         }
-
+    
         .circle {
             width: 100%;
             height: 30px;
@@ -164,42 +164,42 @@
             animation: pulse_3011 4s infinite;
             z-index: -1;
         }
-
+    
         .circle:nth-of-type(1) {
             background: rgba(254, 83, 186, 0.636);
         }
-
+    
         .circle:nth-of-type(2) {
             background: rgba(142, 81, 234, 0.704);
         }
-
+    
         .btn:hover #container-stars {
             z-index: 1;
             background-color: #212121;
         }
-
+    
         .btn:hover {
             transform: scale(1.1)
         }
-
+    
         .btn:active {
             border: double 4px #FE53BB;
             background-origin: border-box;
             background-clip: content-box, border-box;
             animation: none;
         }
-
+    
         .btn:active .circle {
             background: #FE53BB;
         }
-
+    
         #stars {
             position: relative;
             background: transparent;
             width: 200rem;
             height: 200rem;
         }
-
+    
         #stars::after {
             content: "";
             position: absolute;
@@ -209,12 +209,12 @@
             height: 100%;
             animation: animStarRotate 90s linear infinite;
         }
-
+    
         #stars::after {
             background-image: radial-gradient(#ffffff 1px, transparent 1%);
             background-size: 50px 50px;
         }
-
+    
         #stars::before {
             content: "";
             position: absolute;
@@ -224,64 +224,64 @@
             height: 500%;
             animation: animStar 60s linear infinite;
         }
-
+    
         #stars::before {
             background-image: radial-gradient(#ffffff 1px, transparent 1%);
             background-size: 50px 50px;
             opacity: 0.5;
         }
-
+    
         @keyframes animStar {
             from {
                 transform: translateY(0);
             }
-
+    
             to {
                 transform: translateY(-135rem);
             }
         }
-
+    
         @keyframes animStarRotate {
             from {
                 transform: rotate(360deg);
             }
-
+    
             to {
                 transform: rotate(0);
             }
         }
-
+    
         @keyframes gradient_301 {
             0% {
                 background-position: 0% 50%;
             }
-
+    
             50% {
                 background-position: 100% 50%;
             }
-
+    
             100% {
                 background-position: 0% 50%;
             }
         }
-
+    
         @keyframes pulse_3011 {
             0% {
                 transform: scale(0.75);
                 box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.7);
             }
-
+    
             70% {
                 transform: scale(1);
                 box-shadow: 0 0 0 10px rgba(0, 0, 0, 0);
             }
-
+    
             100% {
                 transform: scale(0.75);
                 box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
             }
         }
-
+    
         .modal {
             display: none;
             position: fixed;
@@ -293,29 +293,69 @@
             justify-content: center;
             align-items: center;
         }
-
+    
         .modal-content {
             background-color: #fff;
             padding: 20px;
             border-radius: 10px;
             text-align: center;
         }
-
+    
         .close-btn {
             cursor: pointer;
         }
-
-        /* Media Queries */
+    
+        @media only screen and (min-width: 601px) and (max-width: 768px) {
+            .card {
+                min-width: 150px;
+                max-width: 250px;
+            }
+    
+            .icon {
+                height: 60px;
+                max-width: 60px;
+            }
+    
+            .card .title {
+                margin-top: 20px;
+            }
+    
+            .card .text {
+                font-size: 12px;
+            }
+    
+            .btn {
+                width: 5rem;
+                height: 1.8rem;
+            }
+        }
+    
         @media only screen and (max-width: 600px) {
             .card {
-                max-width: 80%;
+                min-width: 150px;
+                max-width: 250px;
             }
-
-            .button-container {
-                width: 100%;
+    
+            .icon {
+                height: 60px;
+                max-width: 60px;
+            }
+    
+            .card .title {
+                margin-top: 20px;
+            }
+    
+            .card .text {
+                font-size: 12px;
+            }
+    
+            .btn {
+                width: 5rem;
+                height: 1.8rem;
             }
         }
     </style>
+    
 </head>
 
 <body>
@@ -362,10 +402,9 @@
      <!-- Modal HTML -->
      <div id="myModal" class="modal">
       <div class="modal-content">
-        <img src="./pictures/sawatu.jpeg" alt="Image Description" style="width: 90%; max-width: 300px;"><br><br>
+        <img src="./pictures/sawatu.jpeg" alt="Image Description" style="width: 20vw; height: 15vw; margin-left: -0.5vw;"><br><br>
         <audio controls>
           <source src="./music/y2mate.com - Best Cry Ever.mp3" type="audio/mp3">
-          Your browser does not support the audio element.
         </audio>
         <p id="modalText"></p>
         <span class="close-btn" onclick="closeModal()">&times;</span>
